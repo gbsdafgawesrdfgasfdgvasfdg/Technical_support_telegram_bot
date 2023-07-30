@@ -29,7 +29,7 @@ Tickets = 0
 CurrentTicket = 0
 AllTickets = 0
 #Token
-bot = telebot.TeleBot('TOKEN')
+bot = telebot.TeleBot('6137920067:AAGPCfreIuM4MTzmqC5Ww5KCuCTgPd_etHo')
 
 @bot.message_handler(commands=['start'])
 def main(ctx):
@@ -45,8 +45,6 @@ def main(ctx):
     conn.close()
 
     bot.send_message(ctx.chat.id, 'Hello! I am a Technical Support bot. How could i help you?', reply_markup=MainMarkup)
-    if ctx.message_id - 1 > 0:
-        bot.edit_message_reply_markup(ctx.chat.id, ctx.message_id - 1, reply_markup=None)
 
 @bot.callback_query_handler(func=lambda ctx:True)
 def handler(ctx):
