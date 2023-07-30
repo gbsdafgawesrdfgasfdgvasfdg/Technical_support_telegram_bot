@@ -29,7 +29,7 @@ Tickets = 0
 CurrentTicket = 0
 AllTickets = 0
 #Token
-bot = telebot.TeleBot('6137920067:AAGPCfreIuM4MTzmqC5Ww5KCuCTgPd_etHo')
+bot = telebot.TeleBot('TOKEN')
 
 @bot.message_handler(commands=['start'])
 def main(ctx):
